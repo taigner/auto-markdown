@@ -1,4 +1,4 @@
-var io = require('socket.io').listen(8000);
+var io = require('socket.io').listen(3000);
 var chokidar = require('chokidar');
 var marked = require('marked');
 var pygments = require('pygments').colorize;
