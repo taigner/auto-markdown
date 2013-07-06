@@ -1,0 +1,22 @@
+{
+  "author": "Tobias Aigner <tobias.aigner@gmail.com> (http://www.tobiasaigner.com/)",
+  "name": "auto-markdown",
+  "version": "0.0.1",
+  "homepage": "http://github.com/taigner/auto-markdown",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/taigner/auto-markdown.git"
+  },
+  "main": "./server.js",
+  "dependencies": {
+    "chokidar": "*",
+    "marked": "*",
+    "pygments": "*",
+    "socket.io": "0.9.16"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
