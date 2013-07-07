@@ -13,6 +13,10 @@ function highlighting(code, lang, callback) {
 function onFileChanged(socket, path) {
 	fs.readFile(path, 'utf8', function (error, data) {
 		marked(data, { gfm: true, highlight: highlighting }, function (error, content) {
+			// marked produces <pre><code>...<pre> constructs for code highlithing
+			// this causes some extra spaces inside the pre tag
+			content = content.replace('<pre><code', '<code');
+			content = content.replace('</pre></code>', '</code>');
 			socket.emit('fileChanged', {content: content});
 		});
 	})
